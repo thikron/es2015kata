@@ -14,7 +14,7 @@ module.exports = function (config) {
         ],
 
         preprocessors: {
-            'js/*.js': ['babel'],
+            'js/*.js': ['babel', 'coverage'],
             'spec/*Spec.js': ['babel']
         },
 
@@ -66,7 +66,8 @@ module.exports = function (config) {
         plugins: [
             'karma-jasmine',
             'karma-phantomjs-launcher',
-            'karma-babel-preprocessor'
+            'karma-babel-preprocessor',
+            'karma-coverage'
         ]
     });
 };
